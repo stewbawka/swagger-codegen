@@ -210,20 +210,12 @@
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-{{baseName}}-{{nickname}}-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-{{baseName}}-{{nickname}}-0-java">Java</a></li>
-                          <li class=""><a href="#examples-{{baseName}}-{{nickname}}-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-{{baseName}}-{{nickname}}-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-{{baseName}}-{{nickname}}-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-{{baseName}}-{{nickname}}-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-{{baseName}}-{{nickname}}-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-{{baseName}}-{{nickname}}-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-{{baseName}}-{{nickname}}-0-php">PHP</a></li>
                         </ul>
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-{{baseName}}-{{nickname}}-0-curl">
                             <pre class="prettyprint"><code class="language-bsh">
-  curl -X <span style="text-transform: uppercase;">{{httpMethod}}</span>{{#authMethods}}{{#isApiKey}}{{#isKeyInHeader}} -H "{{keyParamName}}: [[apiKey]]" {{/isKeyInHeader}}{{/isApiKey}}{{#isBasic}} -H "Authorization: Basic [[basicHash]]" {{/isBasic}}{{/authMethods}} "{{basePath}}{{path}}{{#hasQueryParams}}?{{#queryParams}}{{^-first}}&{{/-first}}{{paramName}}={{vendorExtensions.x-eg}}{{/queryParams}}{{/hasQueryParams}}"
+  curl -X <span style="text-transform: uppercase;">{{httpMethod}}</span>{{#authMethods}}{{#isApiKey}}{{#isKeyInHeader}} -H "{{keyParamName}}: [[apiKey]]" {{/isKeyInHeader}}{{/isApiKey}}{{#isBasic}} -H "Authorization: Basic [[basicHash]]" {{/isBasic}}{{/authMethods}} "{{basePath}}{{path}}{{#hasQueryParams}}?{{#queryParams}}{{^-first}}&{{/-first}}{{baseName}}={{vendorExtensions.x-eg}}{{/queryParams}}{{/hasQueryParams}}"
   </code></pre>
                           </div>
                           <div class="tab-pane" id="examples-{{baseName}}-{{nickname}}-0-java">
